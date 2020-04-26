@@ -14,7 +14,7 @@ This template contains 5 boilerplate files plus an optional *Coordinator*:
 * __Module__: Instantiates the whole module and sets the communication delegates
 * __Definitions__: contains protocols or other helpers that shapes how the communication will happen between the different layers of the architecture. 
 
-![Module architecture diagram](https://github.com/mvcsantos/swiftui-architecture-template/blob/master/module-architecture.png | width=200)
+![Module architecture diagram](https://github.com/mvcsantos/swiftui-architecture-template/blob/master/module-architecture.png)
 
 
 ## Installation
