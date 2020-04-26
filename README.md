@@ -8,8 +8,8 @@ The template contains no third party dependencies and it's intended to enforce c
 This template contains 5 boilerplate files plus an optional *Coordinator*: 
 
 * __View__: SwiftUI or UIViewRepresentable  
-* __Interactor__: Drives the actions originated in the View Business logic layer
-* __Coordinator__(optional): Holds other modules to navigate to.
+* __Interactor__: Business logic layer
+* __Coordinator__(optional): Holds other modules to navigate to
 * __State__: Observable object that contains the state of the views
 * __Module__: Instantiates the whole module and sets the communication delegates
 * __Definitions__: contains protocols or other helpers that shapes how the communication will happen between the different layers of the architecture. 
