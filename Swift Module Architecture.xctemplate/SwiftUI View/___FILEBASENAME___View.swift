@@ -5,20 +5,29 @@ import SwiftUI
 struct ___FILEBASENAMEASIDENTIFIER___: View {
 
     @ObservedObject var state: ___VARIABLE_productName:identifier___State
-    var delegate: ___FILEBASENAMEASIDENTIFIER___Delegate?
+    var interactor: ___VARIABLE_productName:identifier___InteractorType
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(state.someText)
     }
 }
 
 #if DEBUG
 struct ___FILEBASENAMEASIDENTIFIER____Previews: PreviewProvider {
 
+    class MockInteractor: ___VARIABLE_productName:identifier___InteractorType {
+        var state: ___VARIABLE_productName:identifier___State
+
+        init(state: ___VARIABLE_productName:identifier___State) {
+
+            self.state = state
+        }
+    }
+
     static var previews: some View {
-        let interactor = ___VARIABLE_productName:identifier___Interactor()
-        var view = ___FILEBASENAMEASIDENTIFIER___(state: interactor.state)
-        view.delegate = interactor
+        let state = ___VARIABLE_productName:identifier___State()
+        let interactor = MockInteractor(state: state)
+        let view = ___VARIABLE_productName:identifier___View(state: state, interactor: interactor)
 
         return view
     }

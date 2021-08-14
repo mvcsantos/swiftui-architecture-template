@@ -21,8 +21,6 @@ final class ___FILEBASENAMEASIDENTIFIER___: UIViewRepresentable {
     }
 
     func makeUIView(context: UIViewRepresentableContext<___FILEBASENAMEASIDENTIFIER___>) -> UIView {
-//        let view = SomeView(settings: state.cameraSettings)
-//        view.delegate = self.delegate
 
         return UIView()
     }

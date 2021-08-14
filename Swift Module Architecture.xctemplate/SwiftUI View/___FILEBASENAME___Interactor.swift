@@ -1,15 +1,15 @@
 //___FILEHEADER___
 
-import SwiftUI
+import Foundation
 
 class ___FILEBASENAMEASIDENTIFIER___ {
 
-    @ObservedObject var state: ___VARIABLE_productName:identifier___State
+    var state: ___VARIABLE_productName:identifier___State
 
-    init() {
+    init(state: ___VARIABLE_productName:identifier___State) {
 
-        self.state = ___VARIABLE_productName:identifier___State()
+        self.state = state
     }
 }
 
-extension ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_productName:identifier___ViewDelegate {}
+extension ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_productName:identifier___InteractorType {}

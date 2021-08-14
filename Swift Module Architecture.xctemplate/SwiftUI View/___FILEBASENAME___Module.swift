@@ -5,14 +5,15 @@ import SwiftUI
 class ___FILEBASENAMEASIDENTIFIER___ {
 
     init() {}
+}
 
-    func create___VARIABLE_productName:identifier___View() -> some View {
+extension ___FILEBASENAMEASIDENTIFIER___: ___FILEBASENAMEASIDENTIFIER___Type {
 
-        let interactor = ___VARIABLE_productName:identifier___Interactor()
+    func create___VARIABLE_productName:identifier___View() -> AnyView {
+        let state = ___VARIABLE_productName:identifier___State(someText: "Hello World!")
+        let interactor = ___VARIABLE_productName:identifier___Interactor(state: state)
+        let view = ___VARIABLE_productName:identifier___View(state: state, interactor: interactor)
 
-        var view = ___VARIABLE_productName:identifier___View(state: interactor.state)
-        view.delegate = interactor
-
-        return view
+        return AnyView(view)
     }
 }

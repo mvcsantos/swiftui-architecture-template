@@ -4,10 +4,10 @@ import Foundation
 
 class ___FILEBASENAMEASIDENTIFIER___: ObservableObject {
 
-    @Published var someVariable: String
+    @Published var someText: String
 
-    init(example: String = "") {
+    init(someText: String = "") {
 
-        self.someVariable = example
+        self.someText = someText
     }
 }
