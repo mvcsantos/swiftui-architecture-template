@@ -7,7 +7,7 @@ class ___FILEBASENAMEASIDENTIFIER___ {
     init() {}
 }
 
-extension ___FILEBASENAMEASIDENTIFIER___ {
+extension ___FILEBASENAMEASIDENTIFIER___:  ___FILEBASENAMEASIDENTIFIER___Type {
 
     func create___VARIABLE_productName:identifier___View() -> AnyView {
         let state = ___VARIABLE_productName:identifier___State()
