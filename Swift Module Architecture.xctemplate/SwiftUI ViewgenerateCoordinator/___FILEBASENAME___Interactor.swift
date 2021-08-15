@@ -1,23 +1,25 @@
 //___FILEHEADER___
 
-import SwiftUI
+import Foundation
 
 class ___FILEBASENAMEASIDENTIFIER___ {
 
-    @ObservedObject var state: ___VARIABLE_productName:identifier___State
-    var delegate: ___FILEBASENAMEASIDENTIFIER___Delegate?
+    var state: ___VARIABLE_productName:identifier___State
+    var coordinator: ___VARIABLE_productName:identifier___CoordinatorType
 
-    init() {
+    init(
+        state: ___VARIABLE_productName:identifier___State,
+        coordinator: ___VARIABLE_productName:identifier___CoordinatorType
+    ) {
 
-        self.state = ___VARIABLE_productName:identifier___State()
+        self.state = state
+        self.coordinator = coordinator
     }
 }
 
-extension ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_productName:identifier___ViewDelegate {
+extension ___FILEBASENAMEASIDENTIFIER___:  ___VARIABLE_productName:identifier___InteractorType {
 
-    func wantsToNavigateToEmptyView() -> EmptyView {
-
-        guard let delegate = self.delegate else { fatalError("Delegate not set") }
-        return delegate.navigateToEmptyView()
+    func wantsToNavigateToEmptyView() {
+        coordinator.presentView()
     }
 }

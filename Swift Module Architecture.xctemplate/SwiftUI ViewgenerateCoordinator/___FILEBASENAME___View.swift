@@ -5,27 +5,29 @@ import SwiftUI
 struct ___FILEBASENAMEASIDENTIFIER___: View {
 
     @ObservedObject var state: ___VARIABLE_productName:identifier___State
-    var delegate: ___FILEBASENAMEASIDENTIFIER___Delegate?
+    var interactor: ___VARIABLE_productName:identifier___InteractorType
 
     var body: some View {
-        NavigationView {
-            NavigationLink(destination: self.delegate?.wantsToNavigateToEmptyView()) {
-                Text("Navigate to EmptyView")
-            }
-        }.navigationViewStyle(StackNavigationViewStyle())
+        Button("Navigate") {
+            interactor.wantsToNavigateToEmptyView()
+        }
     }
 }
 
 #if DEBUG
 struct ___FILEBASENAMEASIDENTIFIER____Previews: PreviewProvider {
 
-    static var previews: some View {
+    class MockInteractor: ___VARIABLE_productName:identifier___InteractorType {
 
-        let coordinator = ___VARIABLE_productName:identifier___Coordinator()
-        let interactor = ___VARIABLE_productName:identifier___Interactor()
-        interactor.delegate = coordinator
-        var view = ___FILEBASENAMEASIDENTIFIER___(state: interactor.state)
-        view.delegate = interactor
+        init() {}
+
+        func wantsToNavigateToEmptyView() {}
+    }
+
+    static var previews: some View {
+        let state = ___VARIABLE_productName:identifier___State()
+        let interactor = MockInteractor()
+        let view = ___VARIABLE_productName:identifier___View(state: state, interactor: interactor)
 
         return view
     }
